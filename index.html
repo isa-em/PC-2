@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Catálogo de Casas</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Catálogo de Casas</h1>
+    <nav>
+      <button onclick="filtrar('Todos')">Todos</button>
+      <button onclick="filtrar('Casa')">Casas</button>
+      <button onclick="filtrar('Apartamento')">Apartamentos</button>
+      <button onclick="filtrar('Lote')">Lotes</button>
+    </nav>
+  </header>
+
+  <main>
+    <div id="catalogo" class="grid"></div>
+  </main>
+
+  <footer>
+    <p>© 2025 Portal Inmobiliario</p>
+  </footer>
+
+  <!-- Modal Detalle -->
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span class="cerrar">&times;</span>
+      <img id="modal-img" style="width:100%; border-radius:10px;" />
+      <h2 id="modal-titulo"></h2>
+      <p><strong>Ciudad:</strong> <span id="modal-ciudad"></span></p>
+      <p><strong>Categoría:</strong> <span id="modal-categoria"></span></p>
+      <p><strong>Área:</strong> <span id="modal-area"></span></p>
+      <p><strong>Habitaciones:</strong> <span id="modal-habitaciones"></span></p>
+      <p><strong>Baños:</strong> <span id="modal-banos"></span></p>
+      <p><strong>Parqueaderos:</strong> <span id="modal-parqueaderos"></span></p>
+      <p class="precio-actual" id="modal-precio-actual"></p>
+      <p class="precio-anterior" id="modal-precio-anterior"></p>
+      <a id="modal-maps" class="btn" href="#" target="_blank">Ver en Google Maps</a>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
